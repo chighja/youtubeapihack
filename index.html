@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Search for any category of video with our YouTube video finder." />
+  <title>YouTube Video Finder</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" rel="stylesheet"></link>
+</head>
+
+<body>
+  <section class="container">
+    <header role="banner" class="header">
+      <a href="index.html">
+        <img src="images/youtubeLogo.png" alt="YouTube logo" class="logo">
+      </a>
+      <h1>Video Finder</h1>
+    </header>
+
+    <section class="searchContainer">
+      <form class="searchForm">
+        <input type="text" id="searchBar" placeholder="Find me videos...">
+        <button type="submit" class="searchButton">Search</button>
+      </form>
+    </section>
+
+    <main role="main" class="resultContainer">
+      <section class="videoResults"></section>
+    </main>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>

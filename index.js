@@ -22,7 +22,7 @@ function searchResult(result) {
   let thumbnail = result.snippet.thumbnails.medium.url;
 
   return `<a class="videoName" href="https://www.youtube.com/watch?v=${videoId}" target="_blank">${title}</a>
-  <a href="https://www.youtube.com/watch?v=${videoId}" target="_blank"><img class="image" src="${thumbnail}" alt="Video preview image" target="_blank"></a>`;
+  <a href="https://www.youtube.com/watch?v=${videoId}" target="_blank"><img class="image" src="${thumbnail}" alt="Image of the video" target="_blank"></a>`;
 }
 
 function showResults(data) {
@@ -30,7 +30,10 @@ function showResults(data) {
   let things = $.each(data.items, function(i, thing) {
     htmlstr += searchResult(thing);
   });
-  // $('.videoResults').html(things);
+  $('.totalResults').html(
+    `<h6>The results are in...</h6>
+    <p>There are ${data.pageInfo.totalResults} total search results!</p>`
+  );
   $('.videoResults').html(htmlstr);
 }
 
